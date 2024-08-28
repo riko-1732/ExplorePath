@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Choice App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <h1>
+      <a href="/"><img src="logo.jpg" width="60" alt="ろご" />Explore Path</a>
+    </h1>
+  </header>
+  <body>
+    <div class="container">
+      <h2>条件を指定して探す</h2>
+      <div class="options">
+        <form id="selectionForm" action="results.html">
+          <h3>人通り</h3>
+          <label>
+            <input
+              type="checkbox"
+              id="traffichigh"
+              name="traffic"
+              value="high"
+              onclick="checkTraffic('high')"
+            />
+            多い
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="trafficmid"
+              name="traffic"
+              value="medium"
+              onclick="checkTraffic('medium')"
+            />
+            普通
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="trafficlow"
+              name="traffic"
+              value="low"
+              onclick="checkTraffic('low')"
+            />
+            少ない <br />
+          </label>
+
+          <h3>道幅</h3>
+          <label>
+            <input
+              type="checkbox"
+              id="roadhigh"
+              name="road"
+              value="high"
+              onclick="checkRoad('high')"
+            />
+            広い
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="roadmid"
+              name="road"
+              value="medium"
+              onclick="checkRoad('medium')"
+            />
+            普通
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="roadlow"
+              name="road"
+              value="low"
+              onclick="checkRoad('low')"
+            />
+            狭い<br />
+          </label>
+
+          <h3>影</h3>
+          <label>
+            <input
+              type="checkbox"
+              id="shadowhigh"
+              name="shadow"
+              value="high"
+              onclick="checkShadow('high')"
+            />
+            多い
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="shadowmid"
+              name="shadow"
+              value="medium"
+              onclick="checkShadow('medium')"
+            />
+            普通
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="shadowlow"
+              name="shadow"
+              value="low"
+              onclick="checkShadow('low')"
+            />
+            少ない<br />
+          </label>
+        </form>
+      </div>
+      <div class="button">
+        <button type="button" onclick="submitForm()">結果</button>
+      </div>
+      <div id="error-message"></div>
+      <!-- エラーメッセージ用の空のdivを追加 -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

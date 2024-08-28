@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+body {
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #5aa4a1cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+h3 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.options {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.options label {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+button {
+  width: 10em;
+  height: 3em;
+}
+
+.button {
+  text-align: center;
+  margin: 5px;
+}
+
+#error-message {
+  color: red;
+  font-size: 15px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
