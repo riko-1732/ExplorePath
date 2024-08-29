@@ -16,13 +16,11 @@ a {
 }
 
 body {
-  margin-top: 50px;
   font-family: Arial, sans-serif;
-  background-color: #5aa4a1cd;
+  background-color: #b2d2dd;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 20px;
   font-size: 20px;
 }
@@ -30,7 +28,8 @@ body {
 .container {
   width: 100%;
   background: white;
-  padding: 30px;
+  padding: 20px;
+  margin-top: 10rem;
   border-radius: 5px;
   margin-right: auto;
   margin-left: auto;
@@ -52,6 +51,13 @@ h3 {
   text-align: left;
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 10px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: normal;
 }
 
 .options {
@@ -61,13 +67,32 @@ h3 {
 }
 
 .options label {
-  margin-bottom: 10px;
   font-size: 15px;
 }
 
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.h3-and-checkboxes {
+  display: flex;
+  align-items: center;
+}
+
+.h3-and-checkboxes h3 {
+  margin-right: 20px; /* 必要なスペースに応じて調整 */
+}
+
+.checkbox-group label {
+  margin-right: 20px; /* ラベル間のスペースを調整 */
+}
+
 button {
-  width: 10em;
+  width: 20em;
   height: 3em;
+  background-color: #b2d2dd;
 }
 
 .button {
