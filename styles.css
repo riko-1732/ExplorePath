@@ -38,25 +38,25 @@ body {
 h1 {
   text-align: center;
   font-size: 30px;
-  font-family: cursive;
+  font-family: Comic Sans MS;
 }
 
 h2 {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: normal;
 }
 
 h3 {
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   margin-bottom: 10px;
 }
 
 h4 {
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -82,11 +82,11 @@ h4 {
 }
 
 .h3-and-checkboxes h3 {
-  margin-right: 20px; /* 必要なスペースに応じて調整 */
+  margin-right: 10px; /* 必要なスペースに応じて調整 */
 }
 
 .checkbox-group label {
-  margin-right: 20px; /* ラベル間のスペースを調整 */
+  margin-right: 10px; /* ラベル間のスペースを調整 */
 }
 
 button {
