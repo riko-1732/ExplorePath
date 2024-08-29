@@ -16,110 +16,127 @@
       <h2>条件を指定して探す</h2>
       <div class="options">
         <form id="selectionForm" action="results.html">
-          <h3>人通り</h3>
-          <label>
-            <input
-              type="checkbox"
-              id="traffichigh"
-              name="traffic"
-              value="high"
-              onclick="checkTraffic('high')"
-            />
-            多い
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="trafficmid"
-              name="traffic"
-              value="medium"
-              onclick="checkTraffic('medium')"
-            />
-            普通
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="trafficlow"
-              name="traffic"
-              value="low"
-              onclick="checkTraffic('low')"
-            />
-            少ない <br />
-          </label>
+          <div class="h3-and-checkboxes">
+            <h3>人通り</h3>
+            <div class="checkbox-group">
+              <label>
+                <input
+                  type="checkbox"
+                  id="traffichigh"
+                  name="traffic"
+                  value="high"
+                  onclick="checkTraffic('high')"
+                />
+                多い
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="trafficmid"
+                  name="traffic"
+                  value="medium"
+                  onclick="checkTraffic('medium')"
+                />
+                普通
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="trafficlow"
+                  name="traffic"
+                  value="low"
+                  onclick="checkTraffic('low')"
+                />
+                少ない <br />
+              </label>
+            </div>
+          </div>
 
-          <h3>道幅</h3>
-          <label>
-            <input
-              type="checkbox"
-              id="roadhigh"
-              name="road"
-              value="high"
-              onclick="checkRoad('high')"
-            />
-            広い
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="roadmid"
-              name="road"
-              value="medium"
-              onclick="checkRoad('medium')"
-            />
-            普通
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="roadlow"
-              name="road"
-              value="low"
-              onclick="checkRoad('low')"
-            />
-            狭い<br />
-          </label>
+          <div class="h3-and-checkboxes">
+            <h3>&emsp;道幅</h3>
+            <div class="checkbox-group">
+              <label>
+                <input
+                  type="checkbox"
+                  id="roadhigh"
+                  name="road"
+                  value="high"
+                  onclick="checkRoad('high')"
+                />
+                広い
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="roadmid"
+                  name="road"
+                  value="medium"
+                  onclick="checkRoad('medium')"
+                />
+                普通
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="roadlow"
+                  name="road"
+                  value="low"
+                  onclick="checkRoad('low')"
+                />
+                狭い<br />
+              </label>
+            </div>
+          </div>
 
-          <h3>影</h3>
-          <label>
-            <input
-              type="checkbox"
-              id="shadowhigh"
-              name="shadow"
-              value="high"
-              onclick="checkShadow('high')"
-            />
-            多い
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="shadowmid"
-              name="shadow"
-              value="medium"
-              onclick="checkShadow('medium')"
-            />
-            普通
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              id="shadowlow"
-              name="shadow"
-              value="low"
-              onclick="checkShadow('low')"
-            />
-            少ない<br />
-          </label>
+          <div class="h3-and-checkboxes">
+            <h3>&emsp;&emsp;影</h3>
+            <div class="checkbox-group">
+              <label>
+                <input
+                  type="checkbox"
+                  id="shadowhigh"
+                  name="shadow"
+                  value="high"
+                  onclick="checkShadow('high')"
+                />
+                多い
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="shadowmid"
+                  name="shadow"
+                  value="medium"
+                  onclick="checkShadow('medium')"
+                />
+                普通
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  id="shadowlow"
+                  name="shadow"
+                  value="low"
+                  onclick="checkShadow('low')"
+                />
+                少ない<br />
+              </label>
+            </div>
+          </div>
         </form>
       </div>
       <div class="button">
-        <button type="button" onclick="submitForm()">結果</button>
+        <button type="button" onclick="submitForm()">検索</button>
       </div>
       <div id="error-message"></div>
       <!-- エラーメッセージ用の空のdivを追加 -->
+      <div style="text-align: center">
+        <img id="Map" src="map.jpg" alt="Map" style="width: 300px" border="3" />
+      </div>
+      <h4>三ノ宮駅周辺地図</h4>
     </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
