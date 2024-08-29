@@ -11,87 +11,116 @@ const resultImagesContainer = document.getElementById("resultImages");
 // 結果のパターンと画像を設定
 const resultsMapping = {
   high_high_medium: {
-    text: "1",
-    images: [{ src: "hhm.jpg" }],
+    text: "人通りが多く、道幅が広く、影の量は普通の道です",
+    images: [{ src: "hhm.jpg", caption: "1" }],
   },
   high_high_low: {
-    text: "影が多く、人通りも多い場所です。\nA",
+    text: "人通りが多く、道幅が広く、影が少ない道です",
     images: [
+      { src: "hhl.jpg", caption: "1" },
       { src: "C.jpg", caption: "2" },
       { src: "Y.jpg", caption: "3" },
       { src: "Z.jpg", caption: "" },
-      { src: "hhl.jpg" },
     ],
   },
   high_medium_high: {
-    text: "あなたが選んだのは\n1",
+    text: "人通りが多く、道幅が普通で、影が多い道です",
     images: [
+      { src: "hmh.jpg", caption: "1" },
       { src: "A.jpg", caption: "2" },
       { src: "W.jpg", caption: "3" },
-      { src: "alpha.jpg", caption: "" },
-      { src: "hmh.jpg" },
+      { src: "alpha.jpg", caption: "4" },
     ],
   },
   high_medium_low: {
-    text: "影が多く、人通りは普通です。",
-    images: [{ src: "N.jpg", caption: "" }, { src: "hml.jpg" }],
-  },
-  high_low_high: {
-    text: "影が多く、人通りは少ないです。",
+    text: "人通りが多く、道幅が普通で、影が少ない道です",
     images: [
-      { src: "B.jpg", caption: "影が多い場所" },
-      { src: "D.jpg", caption: "静かな環境" },
-      { src: "X.jpg", caption: "おすすめの場所" },
-      { src: "hlh.jpg" },
+      { src: "hml.jpg", caption: "1" },
+      { src: "N.jpg", caption: "" },
     ],
   },
-  medium_high_high: {
-    text: "影が普通で、人通りは多いです。",
+  high_low_high: {
+    text: "人通りが多く、道幅が狭く、影は多い道です",
     images: [
-      { src: "O.jpg", caption: "バランスの取れた場所" },
-      { src: "mhh.jpg" },
+      { src: "hlh.jpg", caption: "1" },
+      { src: "B.jpg", caption: "2" },
+      { src: "D.jpg", caption: "3" },
+      { src: "X.jpg", caption: "" },
+    ],
+  },
+  high_low_medium: {
+    text: "人通りが多く、道幅は狭く、影の量は普通の道です",
+    images: [{ src: "hlm.jpg", caption: "1" }],
+  },
+
+  medium_high_high: {
+    text: "人通りは普通で、道幅は広く、影が多い道です",
+    images: [
+      { src: "mhh.jpg", caption: "1" },
+      { src: "O.jpg", caption: "" },
     ],
   },
   medium_high_medium: {
-    text: "影も人通りも普通です。",
-    images: [{ src: "J.jpg", caption: "一般的な場所" }, { src: "mhm.jpg" }],
+    text: "人通りは普通で、道幅は広く、影の量は普通の道です",
+    images: [
+      { src: "mhm.jpg", caption: "1" },
+      { src: "J.jpg", caption: "" },
+    ],
   },
   medium_high_low: {
-    text: "影が普通で、人通りは少ないです。",
-    images: [{ src: "K.jpg", caption: "落ち着いた場所" }, { src: "mhl.jpg" }],
+    text: "人通りは普通で、道幅は広く、影が少ない道です",
+    images: [
+      { src: "mhl.jpg", caption: "1" },
+      { src: "K.jpg", caption: "" },
+    ],
+  },
+  medium_medium_high: {
+    text: "人通りも道幅も普通で、影は多い道です",
+    images: [{ src: "mmh.jpg", caption: "1" }],
   },
   medium_medium_medium: {
-    text: "1",
-    images: [{ src: "U.jpg", caption: "" }, { src: "mmm.jpg" }],
+    text: "人通りも道幅も影の量も普通の道です",
+    images: [
+      { src: "mmm.jpg", caption: "1" },
+      { src: "U.jpg", caption: "" },
+    ],
+  },
+  medium_low_medium: {
+    text: "人通りは普通で、道幅は狭く、影の量は普通の道です",
+    images: [{ src: "mlm.jpg", caption: "1" }],
+  },
+
+  medium_low_low: {
+    text: "人通りは普通で、道幅は狭く、影の量は少ないです",
+    images: [{ src: "mll.jpg", caption: "1" }],
   },
   low_low_high: {
-    text: "影も人通りも少ないです。",
+    text: "人通りが少なく、道幅も狭く、影が多い道です",
     images: [
-      { src: "F.jpg", caption: "人通りが少ない場所" },
-      { src: "L.jpg", caption: "影も少ない" },
-      { src: "M.jpg", caption: "静かな環境" },
-      { src: "O.jpg", caption: "おすすめの場所" },
-      { src: "V.jpg", caption: "静かで落ち着く" },
-      { src: "llh.jpg" },
+      { src: "llh.jpg", caption: "1" },
+      { src: "F.jpg", caption: "2" },
+      { src: "L.jpg", caption: "3" },
+      { src: "M.jpg", caption: "4" },
+      { src: "V.jpg", caption: "" },
     ],
   },
   low_low_medium: {
-    text: "影が少なく、人通りは普通です。",
+    text: "人通りが少なく、道幅も狭く、影の量は普通の道です",
     images: [
-      { src: "H.jpg", caption: "明るい場所" },
-      { src: "I.jpg", caption: "人通りは普通" },
-      { src: "P.jpg", caption: "快適な場所" },
-      { src: "S.jpg", caption: "適度な明るさ" },
-      { src: "T.jpg", caption: "おすすめの場所" },
-      { src: "llm.jpg" },
+      { src: "llm.jpg", caption: "1" },
+      { src: "H.jpg", caption: "2" },
+      { src: "I.jpg", caption: "3" },
+      { src: "P.jpg", caption: "4" },
+      { src: "S.jpg", caption: "5" },
+      { src: "T.jpg", caption: "" },
     ],
   },
   low_low_low: {
-    text: "影も人通りも少ないです。",
+    text: "人通りが多く、道幅が普通で、影が少ない道です",
     images: [
-      { src: "Q.jpg", caption: "影も人通りも少ない" },
-      { src: "R.jpg", caption: "静かで落ち着く" },
-      { src: "lll.jpg" },
+      { src: "lll.jpg", caption: "1" },
+      { src: "Q.jpg", caption: "2" },
+      { src: "R.jpg", caption: "3" },
     ],
   },
   // 他の組み合わせも追加できます
