@@ -12,7 +12,10 @@ const resultImagesContainer = document.getElementById("resultImages");
 const resultsMapping = {
   high_high_medium: {
     text: "人通りが多く、道幅が広く、影の量は普通の道です",
-    images: [{ src: "hhm.jpg", caption: "1" }],
+    images: [
+      { src: "hhm.jpg", caption: "1" },
+      { src: "No.jpg", caption: "" },
+    ],
   },
   high_high_low: {
     text: "人通りが多く、道幅が広く、影が少ない道です",
@@ -30,6 +33,7 @@ const resultsMapping = {
       { src: "A.jpg", caption: "2" },
       { src: "W.jpg", caption: "3" },
       { src: "alpha.jpg", caption: "4" },
+      { src: "No.jpg", caption: "" },
     ],
   },
   high_medium_low: {
@@ -76,7 +80,10 @@ const resultsMapping = {
   },
   medium_medium_high: {
     text: "人通りも道幅も普通で、影は多い道です",
-    images: [{ src: "mmh.jpg", caption: "1" }],
+    images: [
+      { src: "mmh.jpg", caption: "1" },
+      { src: "No.jpg", caption: "" },
+    ],
   },
   medium_medium_medium: {
     text: "人通りも道幅も影の量も普通の道です",
@@ -87,12 +94,18 @@ const resultsMapping = {
   },
   medium_low_medium: {
     text: "人通りは普通で、道幅は狭く、影の量は普通の道です",
-    images: [{ src: "mlm.jpg", caption: "1" }],
+    images: [
+      { src: "mlm.jpg", caption: "1" },
+      { src: "No.jpg", caption: "" },
+    ],
   },
 
   medium_low_low: {
     text: "人通りは普通で、道幅は狭く、影の量は少ないです",
-    images: [{ src: "mll.jpg", caption: "1" }],
+    images: [
+      { src: "mll.jpg", caption: "1" },
+      { src: "No.jpg", caption: "" },
+    ],
   },
   low_low_high: {
     text: "人通りが少なく、道幅も狭く、影が多い道です",
@@ -121,6 +134,7 @@ const resultsMapping = {
       { src: "lll.jpg", caption: "1" },
       { src: "Q.jpg", caption: "2" },
       { src: "R.jpg", caption: "3" },
+      { src: "No.jpg", caption: "" },
     ],
   },
   // 他の組み合わせも追加できます
