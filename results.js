@@ -54,7 +54,10 @@ const resultsMapping = {
   },
   high_low_medium: {
     text: "人通りが多く、道幅は狭く、影の量は普通の道です",
-    images: [{ src: "hlm.jpg", caption: "1" }],
+    images: [
+      { src: "hlm.jpg", caption: "1" },
+      { src: "O.jpg", caption: "" },
+    ],
   },
 
   medium_high_high: {
