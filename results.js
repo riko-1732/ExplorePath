@@ -150,7 +150,7 @@ if (traffic && road && shadow) {
     // 結果テキストの表示
     result.innerHTML = `<p style="font-size: 18px;">${resultData.text.replace(
       /\n/g,
-      "<br>"
+      "<br>",
     )}</p>`;
 
     // 既存の内容をクリア
@@ -160,7 +160,7 @@ if (traffic && road && shadow) {
     resultData.images.forEach((imageData) => {
       // 画像を追加
       const imgElement = document.createElement("img");
-      imgElement.src = imageData.src;
+      imgElement.src = "images/" + imageData.src;
       imgElement.alt = imageData.caption || "";
       imgElement.style.width = "300px";
       imgElement.style.display = "block";
